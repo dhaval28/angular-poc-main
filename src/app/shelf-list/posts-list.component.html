@@ -1,0 +1,36 @@
+<div class=" pt-3  container">
+  
+  <div class="row gx-5">
+    <div class="col">
+      <input
+      type="text"
+      class=" form-control"
+      placeholder="Search"
+      [formControl]="search"
+    />
+    </div>
+    <div class="col">
+      <a type="buttton"    style="background-color: rgb(43, 226, 122); color:black;"class="btn  btn-sm" [routerLink]="['/createPost']">Create Shelf</a>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        
+        <th scope="col">User_Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of postsList | async">
+       
+        <td>{{ post.userId }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+        <td><a type="buttton"  class="btn btn-warning btn-sm" [routerLink]="['/postDetails',post.id]">more</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

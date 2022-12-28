@@ -1,0 +1,26 @@
+
+<div class="pt-3 container">
+  <div class=" mx-auto card text-center" style="width:50rem; height:20rem;">
+  <div class="card-header">
+    Shelf Details
+  </div>
+  <div class="card-body">
+
+<div *ngIf="postsDetails | async as postDtl">
+ 
+  <div class="list-group-item">
+    <span class="lable">user Id:-</span>
+    <span>{{ postDtl.userId }}</span>
+  </div>
+  <div class="list-group-item">
+    <span class="lable">Title:-</span>
+    <span>{{ postDtl.title }}</span>
+  </div>
+  <div class="list-group-item">
+    <span class="lable">Body:-</span>
+    <span>{{ postDtl.body }}</span>
+  </div>
+</div>
+</div>
+</div>
+</div>
