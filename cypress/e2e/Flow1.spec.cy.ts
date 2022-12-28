@@ -8,19 +8,19 @@ describe('Flow 1 application', () => {
 
     // checks if the home page is navigated to post-list page
     cy.url().then(($url) => {
-      expect($url).include("/postList")
+      expect($url).include("/shelfList")
     })
 
-    cy.get('.post-list')
+    cy.get('.shelf-list-table')
       .should('be.visible')
 
     // checks if application name is shown correctly on the navbar
     cy.get('.navbar-brand')
       .should('be.visible')
-      .should('have.text', 'ApplicationNgRX')
+      .should('have.text', 'CRUDAPP')
 
     // verifies create post button on navbar and clicks on it
-    cy.get('.create-post-link')
+    cy.get('.create-shelf-button')
       .should('be.visible')
       .trigger('mouseover')
       .should('have.css', 'cursor', 'pointer')
@@ -28,11 +28,11 @@ describe('Flow 1 application', () => {
 
     // verifies if the app is navigated to create post route
     cy.url().then(($url) => {
-      expect($url).include("/createPost")
+      expect($url).include("/createShelf")
     })
 
     // navigating back to post list
-    cy.get('.posts-link')
+    cy.get('.shelf-list-tab')
       .should('be.visible')
       .trigger('mouseover')
       .click()

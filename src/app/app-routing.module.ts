@@ -7,11 +7,11 @@ import { PostsListComponent } from './shelf-list/posts-list.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'postList',
+    redirectTo: 'shelfList',
     pathMatch: 'full',
   },
-  { path: 'postList', component: PostsListComponent },
-  { path: 'createPost', component: CreatePostComponent },
+  { path: 'shelfList', component: PostsListComponent },
+  { path: 'createShelf', component: CreatePostComponent },
   { path: 'postDetails/:id', component: PostsDeatilsComponent },
 ];
 

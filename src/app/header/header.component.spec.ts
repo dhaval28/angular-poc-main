@@ -25,6 +25,6 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.navbar-brand')?.textContent).toEqual('ApplicationNgRX');
+    expect(compiled.querySelector('.navbar-brand')?.textContent).toEqual('CRUDAPP');
   });
 });
