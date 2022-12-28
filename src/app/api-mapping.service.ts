@@ -13,7 +13,7 @@ export class ApiMappingService {
   getPostsListId(id:Number) {
     return this.http.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
   }
-  postList(data: post) {
+  addPost(data: post) {
     return this.http.post('https://jsonplaceholder.typicode.com/posts', JSON.stringify(data));
   }
 }

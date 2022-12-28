@@ -38,7 +38,7 @@ export class PostsEffects {
     return this.action.pipe(
       ofType(addPost),
       mergeMap((action) => {
-        return this.apiMappingService.postList(action.post).pipe(map((data:any)=>{
+        return this.apiMappingService.addPost(action.post).pipe(map((data:any)=>{
             const post={...action.post,id:data.id};
             return addPostSuccess({post})
         }));
